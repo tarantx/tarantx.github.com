@@ -113,7 +113,8 @@ call the &lt;code&gt;free&lt;/code&gt; method on it.&lt;/p&gt;
 &lt;h2 id=&#34;what-s-next&#34;&gt;What&amp;rsquo;s next&lt;/h2&gt;
 
 &lt;p&gt;There are several features that were not covered in this getting started guide, but they can be useful
-for complex applications. You can see them in the &lt;a href=&#34;http://tarantx.github.io/tutorial/&#34;&gt;main documentation&lt;/a&gt;.&lt;/p&gt;
+for complex applications. You can see them in the &lt;a href=&#34;http://tarantx.github.io/tutorial/&#34;&gt;main documentation&lt;/a&gt; and in the &lt;a href=&#34;http://tarantx.github.io/showcases/&#34;&gt;showcases&lt;/a&gt;
+page.&lt;/p&gt;
 
 &lt;p&gt;You can also take a look &lt;a href=&#34;https://github.com/tarantx/Typescript-Examples&#34; target=&#34;_blank&#34;&gt;at the examples repository&lt;/a&gt;,
 to download ready to start examples where you can play and investigate more about actors.&lt;/p&gt;
