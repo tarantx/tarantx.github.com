@@ -11,6 +11,30 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Actors playing Ping Pong</title>
+      <link>http://tarantx.github.io/showcases/ping-pong/</link>
+      <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/showcases/ping-pong/</guid>
+      <description>
+
+&lt;p&gt;This example shows how actors can call each other without blocking themselves.&lt;/p&gt;
+
+&lt;h2 id=&#34;features-used&#34;&gt;Features used&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Async Actors&lt;/em&gt;: Async actors with promises are already part of Tarant. Any method that is marked as async will be
+handled asynchronously and non-blocking by Tarant, and messages are guaranteed to be processed in order.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;live-example&#34;&gt;Live Example&lt;/h2&gt;
+
+&lt;p&gt;&lt;p data-height=&#34;795&#34; data-theme-id=&#34;0&#34; data-slug-hash=&#34;KbvBqm&#34; data-default-tab=&#34;js,result&#34; data-user=&#34;kmruiz&#34; data-pen-title=&#34;tarant ping pong example&#34; class=&#34;codepen&#34;&gt;See the Pen &lt;a href=&#34;https://codepen.io/kmruiz/pen/KbvBqm/&#34;&gt;tarant ping pong example&lt;/a&gt; by Kevin Mas Ruiz (&lt;a href=&#34;https://codepen.io/kmruiz&#34;&gt;@kmruiz&lt;/a&gt;) on &lt;a href=&#34;https://codepen.io&#34;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async src=&#34;https://static.codepen.io/assets/embed/ei.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Getting Started</title>
       <link>http://tarantx.github.io/tutorial/getting-started/</link>
       <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
@@ -129,6 +153,29 @@ handled asynchronously and non-blocking by Tarant, and messages are guaranteed t
 &lt;h2 id=&#34;live-example&#34;&gt;Live Example&lt;/h2&gt;
 
 &lt;p&gt;&lt;p data-height=&#34;606&#34; data-theme-id=&#34;0&#34; data-slug-hash=&#34;GPvGEX&#34; data-default-tab=&#34;js,result&#34; data-user=&#34;kmruiz&#34; data-pen-title=&#34;tarant quick-start example&#34; class=&#34;codepen&#34;&gt;See the Pen &lt;a href=&#34;https://codepen.io/kmruiz/pen/GPvGEX/&#34;&gt;tarant quick-start example&lt;/a&gt; by Kevin Mas Ruiz (&lt;a href=&#34;https://codepen.io/kmruiz&#34;&gt;@kmruiz&lt;/a&gt;) on &lt;a href=&#34;https://codepen.io&#34;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async src=&#34;https://static.codepen.io/assets/embed/ei.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Scheduled Operations</title>
+      <link>http://tarantx.github.io/showcases/scheduleds/</link>
+      <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/showcases/scheduleds/</guid>
+      <description>
+
+&lt;p&gt;This example shows how actors can schedule the execution of messages dynamically.&lt;/p&gt;
+
+&lt;h2 id=&#34;features-used&#34;&gt;Features used&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Scheduleds&lt;/em&gt;: Scheduleds are handled by actors, are non-blocking and support asynchronous methods.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;live-example&#34;&gt;Live Example&lt;/h2&gt;
+
+&lt;p&gt;&lt;p data-height=&#34;265&#34; data-theme-id=&#34;0&#34; data-slug-hash=&#34;LMjBOq&#34; data-default-tab=&#34;js,result&#34; data-user=&#34;kmruiz&#34; data-pen-title=&#34;tarant scheduleds example&#34; class=&#34;codepen&#34;&gt;See the Pen &lt;a href=&#34;https://codepen.io/kmruiz/pen/LMjBOq/&#34;&gt;tarant scheduleds example&lt;/a&gt; by Kevin Mas Ruiz (&lt;a href=&#34;https://codepen.io/kmruiz&#34;&gt;@kmruiz&lt;/a&gt;) on &lt;a href=&#34;https://codepen.io&#34;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
 &lt;script async src=&#34;https://static.codepen.io/assets/embed/ei.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 </description>
     </item>

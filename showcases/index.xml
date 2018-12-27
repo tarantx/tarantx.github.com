@@ -13,6 +13,16 @@
     
     
     <item>
+      <title>Actors playing Ping Pong</title>
+      <link>http://tarantx.github.io/showcases/ping-pong/</link>
+      <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/showcases/ping-pong/</guid>
+      <description>This example shows how actors can call each other without blocking themselves.
+Features used  Async Actors: Async actors with promises are already part of Tarant. Any method that is marked as async will be handled asynchronously and non-blocking by Tarant, and messages are guaranteed to be processed in order.  Live Example See the Pen tarant ping pong example by Kevin Mas Ruiz (@kmruiz) on CodePen.</description>
+    </item>
+    
+    <item>
       <title>Pub Sub for Actors</title>
       <link>http://tarantx.github.io/showcases/pub-sub/</link>
       <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
@@ -21,6 +31,16 @@
       <description>This example demonstrates how Actors process messages independently. When you press the +1 button, you will see how there are two counters, one that updates fast, and one that updates slower.
 Load is simulated using a sleep function with a setTimeout.
 Features used  Topics: Topics encapsulate communication between actors in a fan out basis. Each actor subscribed to a topic will eventually receive messages in guaranteed order. In this specific use case, the +1 button is sending, each time the user clicks on it, a message through a topic.</description>
+    </item>
+    
+    <item>
+      <title>Scheduled Operations</title>
+      <link>http://tarantx.github.io/showcases/scheduleds/</link>
+      <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/showcases/scheduleds/</guid>
+      <description>This example shows how actors can schedule the execution of messages dynamically.
+Features used  Scheduleds: Scheduleds are handled by actors, are non-blocking and support asynchronous methods.  Live Example See the Pen tarant scheduleds example by Kevin Mas Ruiz (@kmruiz) on CodePen.</description>
     </item>
     
   </channel>

@@ -4,6 +4,14 @@
     
     <url>
     
+      <loc>http://tarantx.github.io/showcases/ping-pong/</loc>
+      <lastmod>2018-12-27T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>http://tarantx.github.io/tutorial/getting-started/</loc>
       <lastmod>2018-12-27T00:00:00+00:00</lastmod>
     </url>
@@ -13,6 +21,14 @@
     <url>
     
       <loc>http://tarantx.github.io/showcases/pub-sub/</loc>
+      <lastmod>2018-12-27T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://tarantx.github.io/showcases/scheduleds/</loc>
       <lastmod>2018-12-27T00:00:00+00:00</lastmod>
     </url>
     
