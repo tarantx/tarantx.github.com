@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Showcases on Tarant</title>
+    <link>http://tarantx.github.io/showcases/</link>
+    <description>Recent content in Showcases on Tarant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://tarantx.github.io/showcases/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pub Sub for Actors</title>
+      <link>http://tarantx.github.io/showcases/pub-sub/</link>
+      <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/showcases/pub-sub/</guid>
+      <description>This example demonstrates how Actors process messages independently. When you press the +1 button, you will see how there are two counters, one that updates fast, and one that updates slower.
+Load is simulated using a sleep function with a setTimeout.
+Features used  Topics: Topics encapsulate communication between actors in a fan out basis. Each actor subscribed to a topic will eventually receive messages in guaranteed order. In this specific use case, the +1 button is sending, each time the user clicks on it, a message through a topic.</description>
+    </item>
+    
+  </channel>
+</rss>

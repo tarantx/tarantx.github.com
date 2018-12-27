@@ -103,5 +103,35 @@ to download ready to start examples where you can play and investigate more abou
 </description>
     </item>
     
+    <item>
+      <title>Pub Sub for Actors</title>
+      <link>http://tarantx.github.io/showcases/pub-sub/</link>
+      <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/showcases/pub-sub/</guid>
+      <description>
+
+&lt;p&gt;This example demonstrates how Actors process messages independently. When you press the &lt;code&gt;+1&lt;/code&gt; button, you will see how
+there are two counters, one that updates fast, and one that updates slower.&lt;/p&gt;
+
+&lt;p&gt;Load is simulated using a sleep function with a setTimeout.&lt;/p&gt;
+
+&lt;h2 id=&#34;features-used&#34;&gt;Features used&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Topics&lt;/em&gt;: Topics encapsulate communication between actors in a fan out basis. Each actor subscribed to a topic will
+eventually receive messages &lt;em&gt;in guaranteed order&lt;/em&gt;. In this specific use case, the &lt;code&gt;+1&lt;/code&gt; button is sending, each time
+the user clicks on it, a message through a topic.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Async Actors&lt;/em&gt;: Async actors with promises are already part of Tarant. Any method that is marked as async will be
+handled asynchronously and non-blocking by Tarant, and messages are guaranteed to be processed in order.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;live-example&#34;&gt;Live Example&lt;/h2&gt;
+
+&lt;p&gt;&lt;p data-height=&#34;606&#34; data-theme-id=&#34;0&#34; data-slug-hash=&#34;GPvGEX&#34; data-default-tab=&#34;js,result&#34; data-user=&#34;kmruiz&#34; data-pen-title=&#34;tarant quick-start example&#34; class=&#34;codepen&#34;&gt;See the Pen &lt;a href=&#34;https://codepen.io/kmruiz/pen/GPvGEX/&#34;&gt;tarant quick-start example&lt;/a&gt; by Kevin Mas Ruiz (&lt;a href=&#34;https://codepen.io/kmruiz&#34;&gt;@kmruiz&lt;/a&gt;) on &lt;a href=&#34;https://codepen.io&#34;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async src=&#34;https://static.codepen.io/assets/embed/ei.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
