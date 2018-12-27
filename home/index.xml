@@ -58,13 +58,16 @@
     </item>
     
     <item>
-      <title>Custom Section</title>
+      <title>Try It!</title>
       <link>http://tarantx.github.io/home/custom/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
       <guid>http://tarantx.github.io/home/custom/</guid>
-      <description>This is an example of using the custom widget to create your own homepage section.
-To remove this section, either delete content/home/teaching.md or edit the frontmatter of the file to deactivate the widget by setting active = false.</description>
+      <description>You can try Tarant in CodePen and play a bit with it. The implemented example counts the number of seconds elapsed and updates a HTML element with the count.
+See the Pen tarant quick-start example by Kevin Mas Ruiz (@kmruiz) on CodePen.
+
+If you want to learn more about Tarant, feel free to take a look at the Getting Started guide.
+For a more advanced web applications, we have a vue.</description>
     </item>
     
     <item>
