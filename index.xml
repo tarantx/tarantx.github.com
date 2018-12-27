@@ -12,10 +12,10 @@
     
     <item>
       <title>Getting Started</title>
-      <link>http://tarantx.github.io/post/getting-started/</link>
+      <link>http://tarantx.github.io/tutorial/getting-started/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://tarantx.github.io/post/getting-started/</guid>
+      <guid>http://tarantx.github.io/tutorial/getting-started/</guid>
       <description>
 
 &lt;p&gt;Tarant is a JavaScript library that implements the Actor Model, which makes concurrent programming easy to understand
