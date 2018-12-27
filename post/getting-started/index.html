@@ -15,7 +15,8 @@
   
     
   
-  <meta name="description" content="asd">
+  <meta name="description" content="Tarant is a JavaScript library that implements the Actor Model, which makes concurrent programming easy to understand and maintain. Thus, the most important building block of Tarant is the Actor. This getting started guide will walk you through the basic flow of starting an Actor System (which holds actor references) and your first actor, in a running application.
+Setting up Tarant The only step needed for using Tarant is installing the library.">
 
   
   <link rel="alternate" hreflang="en-us" href="http://tarantx.github.io/post/getting-started/">
@@ -118,7 +119,8 @@
   <meta property="og:site_name" content="Tarant">
   <meta property="og:url" content="http://tarantx.github.io/post/getting-started/">
   <meta property="og:title" content="Getting Started | Tarant">
-  <meta property="og:description" content="asd"><meta property="og:image" content="http://tarantx.github.io/img/icon-192.png">
+  <meta property="og:description" content="Tarant is a JavaScript library that implements the Actor Model, which makes concurrent programming easy to understand and maintain. Thus, the most important building block of Tarant is the Actor. This getting started guide will walk you through the basic flow of starting an Actor System (which holds actor references) and your first actor, in a running application.
+Setting up Tarant The only step needed for using Tarant is installing the library."><meta property="og:image" content="http://tarantx.github.io/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2017-01-01T00:00:00&#43;00:00">
@@ -347,7 +349,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    1 min read
+    2 min read
   </span>
   
 
@@ -429,7 +431,75 @@
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      <p>asd</p>
+      
+
+<p>Tarant is a JavaScript library that implements the Actor Model, which makes concurrent programming easy to understand
+and maintain. Thus, the most important building block of Tarant is the Actor. This getting started guide will walk you
+through the basic flow of starting an Actor System (which holds actor references) and your first actor, in a running
+application.</p>
+
+<h2 id="setting-up-tarant">Setting up Tarant</h2>
+
+<p>The only step needed for using Tarant is installing the library. It&rsquo;s already pushed in the npm registry,
+so you can download it either using npm or yarn:</p>
+
+<pre><code class="language-sh">npm install tarant --save
+</code></pre>
+
+<pre><code class="language-sh">yarn add tarant
+</code></pre>
+
+<p>Now you are ready to start.</p>
+
+<h2 id="defining-your-first-actor">Defining your first Actor</h2>
+
+<p>Tarant implements a new building block to ES6, the Actor. Actors are objects that are thread-safe and asynchronous in a way
+that is transparent to the developer. Actors are managed by the Actor System, which holds references to Actors, so you can
+create and find them.</p>
+
+<p>First, import tarant into the current file:</p>
+
+<pre><code class="language-js">const { Actor, ActorSystem } = require('tarant')
+</code></pre>
+
+<p>Now, you can create your first Actor class. Creating an Actor class is like creating an ordinary ES6 class, but you will
+need to extend Actor.</p>
+
+<p>We will create an Actor with a single method, that will print something to the console.</p>
+
+<pre><code class="language-js">class Pinger extends Actor {
+    ping() {
+        console.log('Ping!')
+    }
+}
+</code></pre>
+
+<h2 id="starting-an-actor-system">Starting an Actor System</h2>
+
+<p>For using the actor, you will need to create first an Actor System. The actor system is used by all actors in an application,
+so you usually will need to create it only once and reuse whenever you need it.</p>
+
+<pre><code class="language-js">const system = ActorSystem.default()
+</code></pre>
+
+<p>Now, you can create a new Actor of type Pinger using your freshly created actor system.</p>
+
+<pre><code class="language-js">const pinger = system.actorOf(Pinger)
+</code></pre>
+
+<p>Using your actor is as easy as using any other object instance. You can now call the ping method.</p>
+
+<pre><code class="language-js">pinger.ping()
+</code></pre>
+
+<h2 id="freeing-the-actor-system">Freeing the Actor System</h2>
+
+<p>The application will keep running until you free the actor system. Freeing the actor system will clean up all
+actor instances and then stop the process, so the application can stop gracefully. To stop the actor system,
+call the <code>free</code> method on it.</p>
+
+<pre><code class="language-js">system.free()
+</code></pre>
 
     </div>
 
