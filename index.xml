@@ -288,66 +288,6 @@ are working with webworkers.&lt;/p&gt;
     </item>
     
     <item>
-      <title>How To Apply Pub Sub Patterns</title>
-      <link>http://tarantx.github.io/tutorial/how-to-apply-pubsub-patterns/</link>
-      <pubDate>Wed, 28 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://tarantx.github.io/tutorial/how-to-apply-pubsub-patterns/</guid>
-      <description>
-
-&lt;p&gt;Tarant implements a basic, but powerful pubsub mechanism named topics. A topic is a stream of events that are sent to
-all subscribers of the topic. For example, if we send the event &lt;code&gt;hello&lt;/code&gt; to the topic &lt;code&gt;salutations&lt;/code&gt;, and there are
-three subscribers, all of them will receive a copy of &lt;code&gt;hello&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Messages send through a topic are guaranteed to be processed only once by the topic and in order.&lt;/p&gt;
-
-&lt;h2 id=&#34;how-to-create-a-topic&#34;&gt;How to create a Topic&lt;/h2&gt;
-
-&lt;p&gt;A Topic, &lt;a href=&#34;http://tarantx.github.io/tutorial/how-to-create-an-actor&#34;&gt;like an actor&lt;/a&gt;, has a protocol. All subscribers to that topic need to satisfy also
-the protocol of the topic. For example, if we have a protocol:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;foo()
-bar()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;All subscribers of the topic will need to implement foo() and bar().&lt;/p&gt;
-
-&lt;p&gt;So first, we need to define a protocol:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;class UserEvents {
-  onUserRegistered(username) {}
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;And then we need to create an actor protocol that satisfies the UserEvents protocol.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;class EmailSender extends Actor {
-  onUserRegistered(username) {
-    sendEmailTo(username)
-  }
-
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now we can create a topic for that protocol and subscribe to it:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const topic = Topic.for(system, &#39;user-events-topic&#39;, UserEvents)
-topic.subscribe(system.actorOf(EmailSender))
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;For sending a message through a topic, we need to call the method that represents the message:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;topic.onUserRegistered(&#39;dante&#39;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;And all subscribers of that topic will receive the message. Is worth to note that a topic is also an actor,
-so all properties of an actor also apply for topics.&lt;/p&gt;
-
-&lt;p&gt;Fore a example on how to use PubSub, you can &lt;a href=&#34;http://tarantx.github.io/showcases/pub-sub&#34;&gt;see the showcase about pubsub&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>How To Create an Actor</title>
       <link>http://tarantx.github.io/tutorial/how-to-create-an-actor/</link>
       <pubDate>Wed, 28 Nov 2018 00:00:00 +0000</pubDate>
@@ -567,6 +507,66 @@ Actor System itself), the error will be delegated to the top level supervisor.&l
 &lt;li&gt;&lt;code&gt;retry-message&lt;/code&gt;: the actor retries the message that we failed to process.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;kill-actor&lt;/code&gt;: the actor that failed is freed, and all information discarded.&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How To Apply Pub Sub Patterns</title>
+      <link>http://tarantx.github.io/tutorial/how-to-apply-pubsub-patterns/</link>
+      <pubDate>Tue, 27 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/tutorial/how-to-apply-pubsub-patterns/</guid>
+      <description>
+
+&lt;p&gt;Tarant implements a basic, but powerful pubsub mechanism named topics. A topic is a stream of events that are sent to
+all subscribers of the topic. For example, if we send the event &lt;code&gt;hello&lt;/code&gt; to the topic &lt;code&gt;salutations&lt;/code&gt;, and there are
+three subscribers, all of them will receive a copy of &lt;code&gt;hello&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Messages send through a topic are guaranteed to be processed only once by the topic and in order.&lt;/p&gt;
+
+&lt;h2 id=&#34;how-to-create-a-topic&#34;&gt;How to create a Topic&lt;/h2&gt;
+
+&lt;p&gt;A Topic, &lt;a href=&#34;http://tarantx.github.io/tutorial/how-to-create-an-actor&#34;&gt;like an actor&lt;/a&gt;, has a protocol. All subscribers to that topic need to satisfy also
+the protocol of the topic. For example, if we have a protocol:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;foo()
+bar()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;All subscribers of the topic will need to implement foo() and bar().&lt;/p&gt;
+
+&lt;p&gt;So first, we need to define a protocol:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;class UserEvents {
+  onUserRegistered(username) {}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And then we need to create an actor protocol that satisfies the UserEvents protocol.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;class EmailSender extends Actor {
+  onUserRegistered(username) {
+    sendEmailTo(username)
+  }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now we can create a topic for that protocol and subscribe to it:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const topic = Topic.for(system, &#39;user-events-topic&#39;, UserEvents)
+topic.subscribe(system.actorOf(EmailSender))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For sending a message through a topic, we need to call the method that represents the message:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;topic.onUserRegistered(&#39;dante&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And all subscribers of that topic will receive the message. Is worth to note that a topic is also an actor,
+so all properties of an actor also apply for topics.&lt;/p&gt;
+
+&lt;p&gt;Fore a example on how to use PubSub, you can &lt;a href=&#34;http://tarantx.github.io/showcases/pub-sub&#34;&gt;see the showcase about pubsub&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

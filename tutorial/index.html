@@ -426,21 +426,21 @@ Setting up Tarant The only step needed for using Tarant is installing the librar
   </div>
   
   <div>
-    <h2><a href="/tutorial/how-to-apply-pubsub-patterns/">How To Apply Pub Sub Patterns</a></h2>
-    <div class="article-style">
-      
-      Tarant implements a basic, but powerful pubsub mechanism named topics. A topic is a stream of events that are sent to all subscribers of the topic. For example, if we send the event hello to the topic salutations, and there are three subscribers, all of them will receive a copy of hello.
-Messages send through a topic are guaranteed to be processed only once by the topic and in order.
-      
-    </div>
-  </div>
-  
-  <div>
     <h2><a href="/tutorial/how-to-create-an-actor/">How To Create an Actor</a></h2>
     <div class="article-style">
       
       Actors represent the main unit of logic in the Actor Model. They are transactional, asynchronous and safe. When you work with actors, you have the following guarantees:
  A single actor will process a single message at a time. For example, if you call a method in an actor two times, you will not process those calls in parallel, but sequentially. A single actor will process messages in order. For example, if you call two different methods in an actor, messages will be processed in the calling order.
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/tutorial/how-to-apply-pubsub-patterns/">How To Apply Pub Sub Patterns</a></h2>
+    <div class="article-style">
+      
+      Tarant implements a basic, but powerful pubsub mechanism named topics. A topic is a stream of events that are sent to all subscribers of the topic. For example, if we send the event hello to the topic salutations, and there are three subscribers, all of them will receive a copy of hello.
+Messages send through a topic are guaranteed to be processed only once by the topic and in order.
       
     </div>
   </div>

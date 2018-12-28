@@ -33,16 +33,6 @@ Setting up Tarant The only step needed for using Tarant is installing the librar
     </item>
     
     <item>
-      <title>How To Apply Pub Sub Patterns</title>
-      <link>http://tarantx.github.io/tutorial/how-to-apply-pubsub-patterns/</link>
-      <pubDate>Wed, 28 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://tarantx.github.io/tutorial/how-to-apply-pubsub-patterns/</guid>
-      <description>Tarant implements a basic, but powerful pubsub mechanism named topics. A topic is a stream of events that are sent to all subscribers of the topic. For example, if we send the event hello to the topic salutations, and there are three subscribers, all of them will receive a copy of hello.
-Messages send through a topic are guaranteed to be processed only once by the topic and in order.</description>
-    </item>
-    
-    <item>
       <title>How To Create an Actor</title>
       <link>http://tarantx.github.io/tutorial/how-to-create-an-actor/</link>
       <pubDate>Wed, 28 Nov 2018 00:00:00 +0000</pubDate>
@@ -50,6 +40,16 @@ Messages send through a topic are guaranteed to be processed only once by the to
       <guid>http://tarantx.github.io/tutorial/how-to-create-an-actor/</guid>
       <description>Actors represent the main unit of logic in the Actor Model. They are transactional, asynchronous and safe. When you work with actors, you have the following guarantees:
  A single actor will process a single message at a time. For example, if you call a method in an actor two times, you will not process those calls in parallel, but sequentially. A single actor will process messages in order. For example, if you call two different methods in an actor, messages will be processed in the calling order.</description>
+    </item>
+    
+    <item>
+      <title>How To Apply Pub Sub Patterns</title>
+      <link>http://tarantx.github.io/tutorial/how-to-apply-pubsub-patterns/</link>
+      <pubDate>Tue, 27 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/tutorial/how-to-apply-pubsub-patterns/</guid>
+      <description>Tarant implements a basic, but powerful pubsub mechanism named topics. A topic is a stream of events that are sent to all subscribers of the topic. For example, if we send the event hello to the topic salutations, and there are three subscribers, all of them will receive a copy of hello.
+Messages send through a topic are guaranteed to be processed only once by the topic and in order.</description>
     </item>
     
   </channel>
