@@ -35,9 +35,62 @@ handled asynchronously and non-blocking by Tarant, and messages are guaranteed t
     </item>
     
     <item>
+      <title>Pub Sub for Actors</title>
+      <link>http://tarantx.github.io/showcases/pub-sub/</link>
+      <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/showcases/pub-sub/</guid>
+      <description>
+
+&lt;p&gt;This example demonstrates how Actors process messages independently. When you press the &lt;code&gt;+1&lt;/code&gt; button, you will see how
+there are two counters, one that updates fast, and one that updates slower.&lt;/p&gt;
+
+&lt;p&gt;Load is simulated using a sleep function with a setTimeout.&lt;/p&gt;
+
+&lt;h2 id=&#34;features-used&#34;&gt;Features used&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Topics&lt;/em&gt;: Topics encapsulate communication between actors in a fan out basis. Each actor subscribed to a topic will
+eventually receive messages &lt;em&gt;in guaranteed order&lt;/em&gt;. In this specific use case, the &lt;code&gt;+1&lt;/code&gt; button is sending, each time
+the user clicks on it, a message through a topic.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Async Actors&lt;/em&gt;: Async actors with promises are already part of Tarant. Any method that is marked as async will be
+handled asynchronously and non-blocking by Tarant, and messages are guaranteed to be processed in order.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;live-example&#34;&gt;Live Example&lt;/h2&gt;
+
+&lt;p&gt;&lt;p data-height=&#34;606&#34; data-theme-id=&#34;0&#34; data-slug-hash=&#34;GPvGEX&#34; data-default-tab=&#34;js,result&#34; data-user=&#34;kmruiz&#34; data-pen-title=&#34;tarant quick-start example&#34; class=&#34;codepen&#34;&gt;See the Pen &lt;a href=&#34;https://codepen.io/kmruiz/pen/GPvGEX/&#34;&gt;tarant quick-start example&lt;/a&gt; by Kevin Mas Ruiz (&lt;a href=&#34;https://codepen.io/kmruiz&#34;&gt;@kmruiz&lt;/a&gt;) on &lt;a href=&#34;https://codepen.io&#34;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async src=&#34;https://static.codepen.io/assets/embed/ei.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Scheduled Operations</title>
+      <link>http://tarantx.github.io/showcases/scheduleds/</link>
+      <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/showcases/scheduleds/</guid>
+      <description>
+
+&lt;p&gt;This example shows how actors can schedule the execution of messages dynamically.&lt;/p&gt;
+
+&lt;h2 id=&#34;features-used&#34;&gt;Features used&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Scheduleds&lt;/em&gt;: Scheduleds are handled by actors, are non-blocking and support asynchronous methods.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;live-example&#34;&gt;Live Example&lt;/h2&gt;
+
+&lt;p&gt;&lt;p data-height=&#34;265&#34; data-theme-id=&#34;0&#34; data-slug-hash=&#34;LMjBOq&#34; data-default-tab=&#34;js,result&#34; data-user=&#34;kmruiz&#34; data-pen-title=&#34;tarant scheduleds example&#34; class=&#34;codepen&#34;&gt;See the Pen &lt;a href=&#34;https://codepen.io/kmruiz/pen/LMjBOq/&#34;&gt;tarant scheduleds example&lt;/a&gt; by Kevin Mas Ruiz (&lt;a href=&#34;https://codepen.io/kmruiz&#34;&gt;@kmruiz&lt;/a&gt;) on &lt;a href=&#34;https://codepen.io&#34;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async src=&#34;https://static.codepen.io/assets/embed/ei.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Getting Started</title>
       <link>http://tarantx.github.io/tutorial/getting-started/</link>
-      <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 30 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>http://tarantx.github.io/tutorial/getting-started/</guid>
       <description>
@@ -129,55 +182,331 @@ to download ready to start examples where you can play and investigate more abou
     </item>
     
     <item>
-      <title>Pub Sub for Actors</title>
-      <link>http://tarantx.github.io/showcases/pub-sub/</link>
-      <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
+      <title>How To Create an Actor System</title>
+      <link>http://tarantx.github.io/tutorial/how-to-create-an-actor-system/</link>
+      <pubDate>Thu, 29 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://tarantx.github.io/showcases/pub-sub/</guid>
+      <guid>http://tarantx.github.io/tutorial/how-to-create-an-actor-system/</guid>
       <description>
 
-&lt;p&gt;This example demonstrates how Actors process messages independently. When you press the &lt;code&gt;+1&lt;/code&gt; button, you will see how
-there are two counters, one that updates fast, and one that updates slower.&lt;/p&gt;
-
-&lt;p&gt;Load is simulated using a sleep function with a setTimeout.&lt;/p&gt;
-
-&lt;h2 id=&#34;features-used&#34;&gt;Features used&lt;/h2&gt;
+&lt;p&gt;Actor Systems hold all the information about the location of all the actors on an application, even if they are
+in memory or not. They are composed of:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Topics&lt;/em&gt;: Topics encapsulate communication between actors in a fan out basis. Each actor subscribed to a topic will
-eventually receive messages &lt;em&gt;in guaranteed order&lt;/em&gt;. In this specific use case, the &lt;code&gt;+1&lt;/code&gt; button is sending, each time
-the user clicks on it, a message through a topic.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Async Actors&lt;/em&gt;: Async actors with promises are already part of Tarant. Any method that is marked as async will be
-handled asynchronously and non-blocking by Tarant, and messages are guaranteed to be processed in order.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tarantx.github.io/architecture/materializers&#34;&gt;Materializers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tarantx.github.io/architecture/resolvers&#34;&gt;Resolvers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tarantx.github.io/architecture/supervisors&#34;&gt;A Top Level Supervisor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tarantx.github.io/architecture/fibers&#34;&gt;Fibers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tarantx.github.io/architecture/mailboxes&#34;&gt;Mailboxes&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;live-example&#34;&gt;Live Example&lt;/h2&gt;
+&lt;p&gt;There are two main ways to create an Actor System in tarant. One uses the default configuration, and the other
+one lets the developer configure most of the advanced fields for customizing the behaviour.&lt;/p&gt;
 
-&lt;p&gt;&lt;p data-height=&#34;606&#34; data-theme-id=&#34;0&#34; data-slug-hash=&#34;GPvGEX&#34; data-default-tab=&#34;js,result&#34; data-user=&#34;kmruiz&#34; data-pen-title=&#34;tarant quick-start example&#34; class=&#34;codepen&#34;&gt;See the Pen &lt;a href=&#34;https://codepen.io/kmruiz/pen/GPvGEX/&#34;&gt;tarant quick-start example&lt;/a&gt; by Kevin Mas Ruiz (&lt;a href=&#34;https://codepen.io/kmruiz&#34;&gt;@kmruiz&lt;/a&gt;) on &lt;a href=&#34;https://codepen.io&#34;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
-&lt;script async src=&#34;https://static.codepen.io/assets/embed/ei.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;h2 id=&#34;default-configuration&#34;&gt;Default Configuration&lt;/h2&gt;
+
+&lt;p&gt;Creating an Actor System with the default configuration is just a matter of calling a single static method. Let&amp;rsquo;s assume
+that you already have a javascript file, first you will need to import the ActorSystem class from the main package:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const { ActorSystem } = require(&#39;tarant&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After importing the ActorSystem, you will need to call the &lt;code&gt;default&lt;/code&gt; static method in ActorSystem and it will return a freshly
+created ActorSystem with a running, default configuration.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const system = ActorSystem.default()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;using-custom-configuration&#34;&gt;Using Custom Configuration&lt;/h2&gt;
+
+&lt;p&gt;The ActorSystem is a complex object because it has several responsibilities, like the orchestration of different components.
+To simplify the configuration we provide a configuration builder with a set of methods to change the default configuration.
+Is worth to note that any not changed field will remain with the default configuration, which is usually enough for most
+applications.&lt;/p&gt;
+
+&lt;p&gt;To use the configuration builder, you will need first to import it from the main package:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const { ActorSystem, ActorSystemConfigurationBuilder } = require(&#39;tarant&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then you can create your configuration using the builder, as in:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const localStorageRepository = new LocalStorageRepository()
+const configuration = ActorSystemConfigurationBuilder.define()
+  .withMaterializers([new VueRenderer(), localStorageRepository]) 
+  // Render actors with vue.js and store their state in the localStorage of the browser
+  .withResolvers([localStorageRepository])
+  // When a non existing actor is requested, try to resolve them in the localStorage of the browser
+  .done()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And then, call the static constructor named &lt;code&gt;for&lt;/code&gt; in the ActorSystem to provide the new configuration:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const system = ActorSystem.for(configuration)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;freeing-the-actor-system&#34;&gt;Freeing the Actor System&lt;/h2&gt;
+
+&lt;p&gt;You can always stop the Actor System using the provided &lt;code&gt;free&lt;/code&gt; method. It will stop all actors and stop all fibers.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;system.free()
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
     <item>
-      <title>Scheduled Operations</title>
-      <link>http://tarantx.github.io/showcases/scheduleds/</link>
-      <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
+      <title>Actor System</title>
+      <link>http://tarantx.github.io/architecture/actor-system/</link>
+      <pubDate>Wed, 28 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://tarantx.github.io/showcases/scheduleds/</guid>
-      <description>
-
-&lt;p&gt;This example shows how actors can schedule the execution of messages dynamically.&lt;/p&gt;
-
-&lt;h2 id=&#34;features-used&#34;&gt;Features used&lt;/h2&gt;
+      <guid>http://tarantx.github.io/architecture/actor-system/</guid>
+      <description>&lt;p&gt;Actor Systems hold all the information about the location of all the actors on an application, even if they are
+in memory or not. They are composed of:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Scheduleds&lt;/em&gt;: Scheduleds are handled by actors, are non-blocking and support asynchronous methods.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tarantx.github.io/architecture/materializers&#34;&gt;Materializers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tarantx.github.io/architecture/resolvers&#34;&gt;Resolvers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tarantx.github.io/architecture/supervisors&#34;&gt;A Top Level Supervisor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tarantx.github.io/architecture/fibers&#34;&gt;Fibers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tarantx.github.io/architecture/mailboxes&#34;&gt;Mailboxes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Fibers</title>
+      <link>http://tarantx.github.io/architecture/fibers/</link>
+      <pubDate>Wed, 28 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/architecture/fibers/</guid>
+      <description>&lt;p&gt;Fibers represent green threads with a set of resources. Usually, an application will contain only one fiber (because
+JavaScript only exposes one single thread, with an event loop), however, it&amp;rsquo;s possible to have multiple fibers when you
+are working with webworkers.&lt;/p&gt;
+
+&lt;p&gt;Fibers offer CPU ticks to processors, that will use them to process actor mailboxes.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How To Create an Actor</title>
+      <link>http://tarantx.github.io/tutorial/how-to-create-an-actor/</link>
+      <pubDate>Wed, 28 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/tutorial/how-to-create-an-actor/</guid>
+      <description>
+
+&lt;p&gt;Actors represent the main unit of logic in the Actor Model. They are transactional, asynchronous and safe. When you work
+with actors, you have the following guarantees:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;A single actor will process a single message at a time&lt;/strong&gt;. For example, if you call a method in an actor two times, you
+will not process those calls in parallel, but sequentially.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;A single actor will process messages in order&lt;/strong&gt;. For example, if you call two different methods in an actor, messages
+will be processed in the calling order.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Actor failures are isolated&lt;/strong&gt;. If an actor fails because there is a requirement that is not fulfilled (like not
+having network connection), the exception will not propagate to all actors, but will be managed by the actor supervisor.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Slow actors will not block other actors&lt;/strong&gt;. If an actor is waiting for a response of a server, or from another actor,
+it will not block other actors, that will be still processing messages.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;live-example&#34;&gt;Live Example&lt;/h2&gt;
+&lt;p&gt;The process of creating an actor is quite transparent, and a simple task. Actor types are represented with a protocol
+they understand. A protocol is a set of messages that an actor can actually handle.&lt;/p&gt;
 
-&lt;p&gt;&lt;p data-height=&#34;265&#34; data-theme-id=&#34;0&#34; data-slug-hash=&#34;LMjBOq&#34; data-default-tab=&#34;js,result&#34; data-user=&#34;kmruiz&#34; data-pen-title=&#34;tarant scheduleds example&#34; class=&#34;codepen&#34;&gt;See the Pen &lt;a href=&#34;https://codepen.io/kmruiz/pen/LMjBOq/&#34;&gt;tarant scheduleds example&lt;/a&gt; by Kevin Mas Ruiz (&lt;a href=&#34;https://codepen.io/kmruiz&#34;&gt;@kmruiz&lt;/a&gt;) on &lt;a href=&#34;https://codepen.io&#34;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
-&lt;script async src=&#34;https://static.codepen.io/assets/embed/ei.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;For example, if we have the following protocol:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;ping()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It means that the actor will only understand the message &lt;code&gt;ping&lt;/code&gt; without parameters.&lt;/p&gt;
+
+&lt;p&gt;With the following protocol:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;sayHi(whom)
+sayBye(whom)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It means that the actor can handle both messages, &lt;code&gt;sayHi&lt;/code&gt; and &lt;code&gt;sayBye&lt;/code&gt; with a single parameter.&lt;/p&gt;
+
+&lt;p&gt;To define an Actor protocol, we just need to create a ES6 class that extends Actor.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const { Actor } = require(&#39;tarant&#39;)
+
+class Person extends Actor {
+  sayHi(whom) {
+    console.log(&#39;Hi&#39;, whom)
+  }
+
+  sayBye(whom) {
+    console.log(&#39;Bye&#39;, whom)
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This Actor type Person will handle two messages with the specified logic (just printing something into the console). To
+instantiate an actor, &lt;a href=&#34;http://tarantx.github.io/tutorial/how-to-create-an-actor-system&#34;&gt;we need a running actor system&lt;/a&gt;. We are going to create an
+Actor System with the default configuration:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const { ActorSystem } = require(&#39;tarant&#39;)
+
+const system = ActorSystem.default()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And to instantiate an actor, we need to call the &lt;code&gt;actorOf&lt;/code&gt; method with the Actor protocol that we want to use:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const dante = system.actorOf(Person)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And you can call any method of the actor directly, like any other class:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;dante.sayHi(&#39;Martin&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;actors-with-initial-state&#34;&gt;Actors with initial state&lt;/h2&gt;
+
+&lt;p&gt;It&amp;rsquo;s common that an actor needs some initial state to work, for example, in our case, we need the person name. Actors can
+receive any initial state on the constructor, and this state can be passed through &lt;code&gt;actorOf&lt;/code&gt;. For example, let&amp;rsquo;s extend
+our &lt;code&gt;Person&lt;/code&gt; protocol to allow having a name.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;class Person extends Actor {
+  constructor(name) {
+    super()
+
+    this.name = name
+  }
+
+  sayHi(whom) {
+    console.log(this.name, &#39;: Hi&#39;, whom)
+  }
+
+  sayBye(whom) {
+    console.log(this.name, &#39;: Bye&#39;, whom)
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When defining the constructor of an Actor, there are two things to consider:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;You need to call the super() constructor&lt;/strong&gt;. This is a JavaScript rule and it won&amp;rsquo;t work if we don&amp;rsquo;t do it the first
+thing in your newly created constructor.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;super() has a parameter &lt;code&gt;id&lt;/code&gt; that is the ID of the actor&lt;/strong&gt;. Actors are uniquely identified by an ID that you can
+pass through the super constructor (as in &lt;code&gt;super(theIdIWant)&lt;/code&gt;). If we don&amp;rsquo;t specify any ID, tarant will create a random
+UUID for it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now that we have our new redefined protocol, we can create a new actor with a name.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const dante = system.actorOf(Person, [&#39;Dante&#39;])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now, calling the sayHi method like in the previous example, will show:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; Dante : Hi Martin
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;how-calling-an-actor-works&#34;&gt;How calling an Actor works&lt;/h2&gt;
+
+&lt;p&gt;It&amp;rsquo;s important to note that calling an actor method is not a synchronous operation. It&amp;rsquo;s completely asynchronous and they
+always return promises. When you call a method on an actor, the actor will add a new message to it&amp;rsquo;s mailbox, and will be
+processing messages in the mailbox until it&amp;rsquo;s empty.&lt;/p&gt;
+
+&lt;p&gt;You can find more information of the architecture in &lt;a href=&#34;http://tarantx.github.io/architecture/&#34;&gt;the architecture page&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mailboxes</title>
+      <link>http://tarantx.github.io/architecture/mailboxes/</link>
+      <pubDate>Wed, 28 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/architecture/mailboxes/</guid>
+      <description>&lt;p&gt;Mailboxes are a queue of messages with guaranteed ordering. Mailboxes have a set of useful properties that make them
+really powerful:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Mailboxes are partitioned&lt;/strong&gt;. It means that messages are distributed through partitions, and subscribers can read
+from different partitions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mailboxes are dynamic&lt;/strong&gt;. You can subscribe and unsubscribe from a mailbox many times.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;They guarantee ordered/only once delivery&lt;/strong&gt;. Even if an actor can process the same message more than once
+(depending on the recovery strategy), the message will be only delivered once by the mailbox.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Materializers</title>
+      <link>http://tarantx.github.io/architecture/materializers/</link>
+      <pubDate>Wed, 28 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/architecture/materializers/</guid>
+      <description>&lt;p&gt;Materializers are hooks over the lifecycle of an actor. They are used to add implicit infrastructure logic to an actor. Some
+use case of materializers are, actually, two main tarant modules &lt;a href=&#34;https://github.com/tarantx/tarant-vue&#34; target=&#34;_blank&#34;&gt;tarant-vue&lt;/a&gt; and
+&lt;a href=&#34;https://github.com/tarantx/tarant-local-storage&#34; target=&#34;_blank&#34;&gt;tarant-local-storage&lt;/a&gt; that let us render actors and save their state
+in the local storage of the browser, for later recovery.&lt;/p&gt;
+
+&lt;p&gt;A materializer can implement the following methods:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;onInitialize(actor: Actor)&lt;/code&gt; when the actor is first created.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;onBeforeMessage(actor: Actor, message: ActorMessage): void&lt;/code&gt; when the actor is going to process a message.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;onAfterMessage(actor: Actor, message: ActorMessage): void&lt;/code&gt; after a message has been processed succesfully.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;onError(actor: Actor, message: ActorMessage, error: any): void&lt;/code&gt; when processing a message failed. You can not
+recover from the error from here, for that, you need to use &lt;a href=&#34;http://tarantx.github.io/architecture/supervisors&#34;&gt;supervisors&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Resolvers</title>
+      <link>http://tarantx.github.io/architecture/resolvers/</link>
+      <pubDate>Wed, 28 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/architecture/resolvers/</guid>
+      <description>&lt;p&gt;Resolvers let us find actors that have been persisted in external systems, like databases or storages. One example
+of resolver, is the &lt;a href=&#34;https://github.com/tarantx/tarant-local-storage&#34; target=&#34;_blank&#34;&gt;tarant-local-storage&lt;/a&gt; module, which let us recover
+actors that have been persisted in the local storage, without losing information.&lt;/p&gt;
+
+&lt;p&gt;Resolvers must implement the following method:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;resolveActorById(id: string): Promise&amp;lt;Actor&amp;gt;&lt;/code&gt;. If the actor exists in the storage, return a promise of the configured
+actor, if not, returns a promise with undefined.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Supervisors</title>
+      <link>http://tarantx.github.io/architecture/supervisors/</link>
+      <pubDate>Wed, 28 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/architecture/supervisors/</guid>
+      <description>
+
+&lt;p&gt;Supervisors are the responsible of handling actor failures and deciding the strategy to recover. There are two types
+of supervisors.&lt;/p&gt;
+
+&lt;h2 id=&#34;top-level-supervisor&#34;&gt;Top Level Supervisor&lt;/h2&gt;
+
+&lt;p&gt;The Top Level Supervisor is an object that implements the IActorSupervisor interface. The
+&lt;a href=&#34;http://tarantx.github.io/architecture/actor-system&#34;&gt;Actor System&lt;/a&gt; delegates all errors to the top level supervisor.&lt;/p&gt;
+
+&lt;h2 id=&#34;actor-supervisor&#34;&gt;Actor Supervisor&lt;/h2&gt;
+
+&lt;p&gt;Actors behalf as supervisors of their child actors. When a child actor fails, the parent will decide
+which strategy to follow to recover. When the parent actor doesn&amp;rsquo;t define the supervision strategy, it will
+be delegated to the parent of the parent, and so on. If the actor is a root actor (created by the
+Actor System itself), the error will be delegated to the top level supervisor.&lt;/p&gt;
+
+&lt;h2 id=&#34;supervision-strategies&#34;&gt;Supervision Strategies&lt;/h2&gt;
+
+&lt;p&gt;There are three supervision strategies:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;drop-message&lt;/code&gt;: the actor drops the message that we failed to process.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;retry-message&lt;/code&gt;: the actor retries the message that we failed to process.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;kill-actor&lt;/code&gt;: the actor that failed is freed, and all information discarded.&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

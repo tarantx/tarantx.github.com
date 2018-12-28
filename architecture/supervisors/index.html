@@ -15,10 +15,12 @@
   
     
   
-  <meta name="description" content=" TypeScript/JavaScript library for building software using the actor system model">
+  <meta name="description" content="Supervisors are the responsible of handling actor failures and deciding the strategy to recover. There are two types of supervisors.
+Top Level Supervisor The Top Level Supervisor is an object that implements the IActorSupervisor interface. The Actor System delegates all errors to the top level supervisor.
+Actor Supervisor Actors behalf as supervisors of their child actors. When a child actor fails, the parent will decide which strategy to follow to recover.">
 
   
-  <link rel="alternate" hreflang="en-us" href="http://tarantx.github.io/publication/">
+  <link rel="alternate" hreflang="en-us" href="http://tarantx.github.io/architecture/supervisors/">
 
   
 
@@ -96,15 +98,15 @@
   
 
   
-  <link rel="alternate" href="http://tarantx.github.io/publication/index.xml" type="application/rss+xml" title="Tarant">
-  <link rel="feed" href="http://tarantx.github.io/publication/index.xml" type="application/rss+xml" title="Tarant">
+  <link rel="alternate" href="http://tarantx.github.io/index.xml" type="application/rss+xml" title="Tarant">
+  <link rel="feed" href="http://tarantx.github.io/index.xml" type="application/rss+xml" title="Tarant">
   
 
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="http://tarantx.github.io/publication/">
+  <link rel="canonical" href="http://tarantx.github.io/architecture/supervisors/">
 
   
   
@@ -115,12 +117,16 @@
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="Tarant">
-  <meta property="og:url" content="http://tarantx.github.io/publication/">
-  <meta property="og:title" content="Publications | Tarant">
-  <meta property="og:description" content=" TypeScript/JavaScript library for building software using the actor system model"><meta property="og:image" content="http://tarantx.github.io/img/logo.png">
+  <meta property="og:url" content="http://tarantx.github.io/architecture/supervisors/">
+  <meta property="og:title" content="Supervisors | Tarant">
+  <meta property="og:description" content="Supervisors are the responsible of handling actor failures and deciding the strategy to recover. There are two types of supervisors.
+Top Level Supervisor The Top Level Supervisor is an object that implements the IActorSupervisor interface. The Actor System delegates all errors to the top level supervisor.
+Actor Supervisor Actors behalf as supervisors of their child actors. When a child actor fails, the parent will decide which strategy to follow to recover."><meta property="og:image" content="http://tarantx.github.io/img/logo.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2017-01-01T00:00:00&#43;00:00">
+  <meta property="article:published_time" content="2018-11-28T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2018-11-28T00:00:00&#43;00:00">
   
 
   
@@ -153,7 +159,7 @@
 
   
 
-  <title>Publications | Tarant</title>
+  <title>Supervisors | Tarant</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" class="dark">
@@ -310,6 +316,25 @@
         
         
           
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/architecture/">
+            
+            <span>Architecture</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
             
           
         
@@ -346,7 +371,9 @@
 </nav>
 
 
+<article class="article" itemscope itemtype="http://schema.org/Article">
 
+  
 
 
 
@@ -363,54 +390,268 @@
 
   
   
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">Supervisors</h1>
+
+  
+
   
     
-  
-<div class="universal-wrapper pt-3">
-  <h1 itemprop="name">Publications</h1>
+
+<div class="article-metadata">
 
   
+  
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="">
+  </span>
+  
+
+  <span class="article-date">
+    
+    <meta content="2018-11-28 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+    <time datetime="2018-11-28 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+      2018-11-28
+    </time>
+  </span>
+  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="">
+  </span>
+
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/architecture/supervisors/#disqus_thread"></a>
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Supervisors&amp;url=http%3a%2f%2ftarantx.github.io%2farchitecture%2fsupervisors%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2ftarantx.github.io%2farchitecture%2fsupervisors%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2ftarantx.github.io%2farchitecture%2fsupervisors%2f&amp;title=Supervisors"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=http%3a%2f%2ftarantx.github.io%2farchitecture%2fsupervisors%2f&amp;title=Supervisors"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Supervisors&amp;body=http%3a%2f%2ftarantx.github.io%2farchitecture%2fsupervisors%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 </div>
 
 
 
-<div class="universal-wrapper">
-  <div class="row">
-    <div class="col-lg-12">
+  <div class="article-container">
 
+    <div class="article-style" itemprop="articleBody">
       
 
-      
-      
+<p>Supervisors are the responsible of handling actor failures and deciding the strategy to recover. There are two types
+of supervisors.</p>
 
-      <div class="form-row mb-3">
-        <div class="col-auto">
-          Filter by type:
-        </div>
-        <div class="col-auto">
-          <select class="pub-filters pubtype-select form-control form-control-sm" data-filter-group="pubtype">
-            <option value="*">All</option>
-            
-          </select>
-        </div>
-        <div class="col-auto">
-          <select class="pub-filters form-control form-control-sm" data-filter-group="year">
-            <option value="*">All</option>
-            
-            
-          </select>
-        </div>
-      </div>
+<h2 id="top-level-supervisor">Top Level Supervisor</h2>
 
-      <div id="container-publications">
-        
-      </div>
+<p>The Top Level Supervisor is an object that implements the IActorSupervisor interface. The
+<a href="/architecture/actor-system">Actor System</a> delegates all errors to the top level supervisor.</p>
+
+<h2 id="actor-supervisor">Actor Supervisor</h2>
+
+<p>Actors behalf as supervisors of their child actors. When a child actor fails, the parent will decide
+which strategy to follow to recover. When the parent actor doesn&rsquo;t define the supervision strategy, it will
+be delegated to the parent of the parent, and so on. If the actor is a root actor (created by the
+Actor System itself), the error will be delegated to the top level supervisor.</p>
+
+<h2 id="supervision-strategies">Supervision Strategies</h2>
+
+<p>There are three supervision strategies:</p>
+
+<ul>
+<li><code>drop-message</code>: the actor drops the message that we failed to process.</li>
+<li><code>retry-message</code>: the actor retries the message that we failed to process.</li>
+<li><code>kill-actor</code>: the actor that failed is freed, and all information discarded.</li>
+</ul>
 
     </div>
+
+    
+
+    
+
+
+
+
+
+
+<div class="media author-card" itemscope itemtype="http://schema.org/Person">
+  
+  <div class="media-body">
+    <h5 class="card-title" itemprop="name"><a href="/"></a></h5>
+    
+    
+    <ul class="network-icon" aria-hidden="true">
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="/#contact" >
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://twitter.com/GeorgeCushen" target="_blank" rel="noopener">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ" target="_blank" rel="noopener">
+          <i class="ai ai-google-scholar"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://github.com/gcushen" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+      
+    </ul>
   </div>
 </div>
+
+
+
+
+    
+    
+
+    
+
+    
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tarant" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+  </div>
+</article>
+
 <div class="container">
   <footer class="site-footer">
   

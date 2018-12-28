@@ -20,7 +20,7 @@
   <meta name="description" content=" TypeScript/JavaScript library for building software using the actor system model">
 
   
-  <link rel="alternate" hreflang="en-us" href="http://tarantx.github.io/publication_types/">
+  <link rel="alternate" hreflang="en-us" href="http://tarantx.github.io/architecture/">
 
   
 
@@ -98,15 +98,15 @@
   
 
   
-  <link rel="alternate" href="http://tarantx.github.io/publication_types/index.xml" type="application/rss+xml" title="Tarant">
-  <link rel="feed" href="http://tarantx.github.io/publication_types/index.xml" type="application/rss+xml" title="Tarant">
+  <link rel="alternate" href="http://tarantx.github.io/architecture/index.xml" type="application/rss+xml" title="Tarant">
+  <link rel="feed" href="http://tarantx.github.io/architecture/index.xml" type="application/rss+xml" title="Tarant">
   
 
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="http://tarantx.github.io/publication_types/">
+  <link rel="canonical" href="http://tarantx.github.io/architecture/">
 
   
   
@@ -117,12 +117,12 @@
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="Tarant">
-  <meta property="og:url" content="http://tarantx.github.io/publication_types/">
-  <meta property="og:title" content="Publication_types | Tarant">
+  <meta property="og:url" content="http://tarantx.github.io/architecture/">
+  <meta property="og:title" content=" | Tarant">
   <meta property="og:description" content=" TypeScript/JavaScript library for building software using the actor system model"><meta property="og:image" content="http://tarantx.github.io/img/logo.png">
   <meta property="og:locale" content="en-us">
   
-  
+  <meta property="og:updated_time" content="2017-01-01T00:00:00&#43;00:00">
   
 
   
@@ -155,7 +155,7 @@
 
   
 
-  <title>Publication_types | Tarant</title>
+  <title> | Tarant</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" class="dark">
@@ -374,6 +374,8 @@
 
 
 
+  
+
 
 
 
@@ -388,7 +390,7 @@
     
   
 <div class="universal-wrapper pt-3">
-  <h1 itemprop="name">Publication_types</h1>
+  <h1 itemprop="name"></h1>
 
   
 
@@ -401,6 +403,69 @@
   
 
   
+  
+  <div>
+    <h2><a href="/architecture/actor-system/">Actor System</a></h2>
+    <div class="article-style">
+      
+      Actor Systems hold all the information about the location of all the actors on an application, even if they are in memory or not. They are composed of:
+ Materializers Resolvers A Top Level Supervisor Fibers Mailboxes  
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/architecture/fibers/">Fibers</a></h2>
+    <div class="article-style">
+      
+      Fibers represent green threads with a set of resources. Usually, an application will contain only one fiber (because JavaScript only exposes one single thread, with an event loop), however, it&rsquo;s possible to have multiple fibers when you are working with webworkers.
+Fibers offer CPU ticks to processors, that will use them to process actor mailboxes.
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/architecture/mailboxes/">Mailboxes</a></h2>
+    <div class="article-style">
+      
+      Mailboxes are a queue of messages with guaranteed ordering. Mailboxes have a set of useful properties that make them really powerful:
+ Mailboxes are partitioned. It means that messages are distributed through partitions, and subscribers can read from different partitions. Mailboxes are dynamic. You can subscribe and unsubscribe from a mailbox many times. They guarantee ordered/only once delivery. Even if an actor can process the same message more than once (depending on the recovery strategy), the message will be only delivered once by the mailbox.
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/architecture/materializers/">Materializers</a></h2>
+    <div class="article-style">
+      
+      Materializers are hooks over the lifecycle of an actor. They are used to add implicit infrastructure logic to an actor. Some use case of materializers are, actually, two main tarant modules tarant-vue and tarant-local-storage that let us render actors and save their state in the local storage of the browser, for later recovery.
+A materializer can implement the following methods:
+ onInitialize(actor: Actor) when the actor is first created. onBeforeMessage(actor: Actor, message: ActorMessage): void when the actor is going to process a message.
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/architecture/resolvers/">Resolvers</a></h2>
+    <div class="article-style">
+      
+      Resolvers let us find actors that have been persisted in external systems, like databases or storages. One example of resolver, is the tarant-local-storage module, which let us recover actors that have been persisted in the local storage, without losing information.
+Resolvers must implement the following method:
+ resolveActorById(id: string): Promise&lt;Actor&gt;. If the actor exists in the storage, return a promise of the configured actor, if not, returns a promise with undefined.
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="/architecture/supervisors/">Supervisors</a></h2>
+    <div class="article-style">
+      
+      Supervisors are the responsible of handling actor failures and deciding the strategy to recover. There are two types of supervisors.
+Top Level Supervisor The Top Level Supervisor is an object that implements the IActorSupervisor interface. The Actor System delegates all errors to the top level supervisor.
+Actor Supervisor Actors behalf as supervisors of their child actors. When a child actor fails, the parent will decide which strategy to follow to recover.
+      
+    </div>
+  </div>
   
 
   

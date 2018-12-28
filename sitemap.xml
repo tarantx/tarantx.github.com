@@ -12,14 +12,6 @@
     
     <url>
     
-      <loc>http://tarantx.github.io/tutorial/getting-started/</loc>
-      <lastmod>2018-12-27T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
       <loc>http://tarantx.github.io/showcases/pub-sub/</loc>
       <lastmod>2018-12-27T00:00:00+00:00</lastmod>
     </url>
@@ -36,31 +28,79 @@
     
     <url>
     
-      <loc>http://tarantx.github.io/tutorial/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+      <loc>http://tarantx.github.io/tutorial/getting-started/</loc>
+      <lastmod>2018-11-30T00:00:00+00:00</lastmod>
     </url>
     
   
     
     <url>
     
-      <loc>http://tarantx.github.io/post/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+      <loc>http://tarantx.github.io/tutorial/how-to-create-an-actor-system/</loc>
+      <lastmod>2018-11-29T00:00:00+00:00</lastmod>
     </url>
     
   
     
     <url>
     
-      <loc>http://tarantx.github.io/publication/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+      <loc>http://tarantx.github.io/architecture/actor-system/</loc>
+      <lastmod>2018-11-28T00:00:00+00:00</lastmod>
     </url>
     
   
     
     <url>
     
-      <loc>http://tarantx.github.io/talk/</loc>
+      <loc>http://tarantx.github.io/architecture/fibers/</loc>
+      <lastmod>2018-11-28T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://tarantx.github.io/tutorial/how-to-create-an-actor/</loc>
+      <lastmod>2018-11-28T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://tarantx.github.io/architecture/mailboxes/</loc>
+      <lastmod>2018-11-28T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://tarantx.github.io/architecture/materializers/</loc>
+      <lastmod>2018-11-28T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://tarantx.github.io/architecture/resolvers/</loc>
+      <lastmod>2018-11-28T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://tarantx.github.io/architecture/supervisors/</loc>
+      <lastmod>2018-11-28T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://tarantx.github.io/architecture/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -69,6 +109,14 @@
     <url>
     
       <loc>http://tarantx.github.io/showcases/</loc>
+      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://tarantx.github.io/tutorial/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     

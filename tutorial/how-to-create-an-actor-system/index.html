@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -17,10 +15,11 @@
   
     
   
-  <meta name="description" content=" TypeScript/JavaScript library for building software using the actor system model">
+  <meta name="description" content="Actor Systems hold all the information about the location of all the actors on an application, even if they are in memory or not. They are composed of:
+ Materializers Resolvers A Top Level Supervisor Fibers Mailboxes  There are two main ways to create an Actor System in tarant. One uses the default configuration, and the other one lets the developer configure most of the advanced fields for customizing the behaviour.">
 
   
-  <link rel="alternate" hreflang="en-us" href="http://tarantx.github.io/publication_types/">
+  <link rel="alternate" hreflang="en-us" href="http://tarantx.github.io/tutorial/how-to-create-an-actor-system/">
 
   
 
@@ -98,15 +97,15 @@
   
 
   
-  <link rel="alternate" href="http://tarantx.github.io/publication_types/index.xml" type="application/rss+xml" title="Tarant">
-  <link rel="feed" href="http://tarantx.github.io/publication_types/index.xml" type="application/rss+xml" title="Tarant">
+  <link rel="alternate" href="http://tarantx.github.io/index.xml" type="application/rss+xml" title="Tarant">
+  <link rel="feed" href="http://tarantx.github.io/index.xml" type="application/rss+xml" title="Tarant">
   
 
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="http://tarantx.github.io/publication_types/">
+  <link rel="canonical" href="http://tarantx.github.io/tutorial/how-to-create-an-actor-system/">
 
   
   
@@ -117,12 +116,15 @@
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="Tarant">
-  <meta property="og:url" content="http://tarantx.github.io/publication_types/">
-  <meta property="og:title" content="Publication_types | Tarant">
-  <meta property="og:description" content=" TypeScript/JavaScript library for building software using the actor system model"><meta property="og:image" content="http://tarantx.github.io/img/logo.png">
+  <meta property="og:url" content="http://tarantx.github.io/tutorial/how-to-create-an-actor-system/">
+  <meta property="og:title" content="How To Create an Actor System | Tarant">
+  <meta property="og:description" content="Actor Systems hold all the information about the location of all the actors on an application, even if they are in memory or not. They are composed of:
+ Materializers Resolvers A Top Level Supervisor Fibers Mailboxes  There are two main ways to create an Actor System in tarant. One uses the default configuration, and the other one lets the developer configure most of the advanced fields for customizing the behaviour."><meta property="og:image" content="http://tarantx.github.io/img/logo.png">
   <meta property="og:locale" content="en-us">
   
+  <meta property="article:published_time" content="2018-11-29T00:00:00&#43;00:00">
   
+  <meta property="article:modified_time" content="2018-11-29T00:00:00&#43;00:00">
   
 
   
@@ -155,7 +157,7 @@
 
   
 
-  <title>Publication_types | Tarant</title>
+  <title>How To Create an Actor System | Tarant</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" class="dark">
@@ -367,7 +369,9 @@
 </nav>
 
 
+<article class="article" itemscope itemtype="http://schema.org/Article">
 
+  
 
 
 
@@ -384,28 +388,306 @@
 
   
   
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">How To Create an Actor System</h1>
+
+  
+
   
     
-  
-<div class="universal-wrapper pt-3">
-  <h1 itemprop="name">Publication_types</h1>
+
+<div class="article-metadata">
 
   
+  
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="">
+  </span>
+  
+
+  <span class="article-date">
+    
+    <meta content="2018-11-29 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+    <time datetime="2018-11-29 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+      2018-11-29
+    </time>
+  </span>
+  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="">
+  </span>
+
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/tutorial/how-to-create-an-actor-system/#disqus_thread"></a>
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=How%20To%20Create%20an%20Actor%20System&amp;url=http%3a%2f%2ftarantx.github.io%2ftutorial%2fhow-to-create-an-actor-system%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2ftarantx.github.io%2ftutorial%2fhow-to-create-an-actor-system%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2ftarantx.github.io%2ftutorial%2fhow-to-create-an-actor-system%2f&amp;title=How%20To%20Create%20an%20Actor%20System"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=http%3a%2f%2ftarantx.github.io%2ftutorial%2fhow-to-create-an-actor-system%2f&amp;title=How%20To%20Create%20an%20Actor%20System"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=How%20To%20Create%20an%20Actor%20System&amp;body=http%3a%2f%2ftarantx.github.io%2ftutorial%2fhow-to-create-an-actor-system%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 </div>
 
 
 
-<div class="universal-wrapper">
-  
+  <div class="article-container">
 
-  
-  
+    <div class="article-style" itemprop="articleBody">
+      
 
-  
+<p>Actor Systems hold all the information about the location of all the actors on an application, even if they are
+in memory or not. They are composed of:</p>
 
+<ul>
+<li><a href="/architecture/materializers">Materializers</a></li>
+<li><a href="/architecture/resolvers">Resolvers</a></li>
+<li><a href="/architecture/supervisors">A Top Level Supervisor</a></li>
+<li><a href="/architecture/fibers">Fibers</a></li>
+<li><a href="/architecture/mailboxes">Mailboxes</a></li>
+</ul>
+
+<p>There are two main ways to create an Actor System in tarant. One uses the default configuration, and the other
+one lets the developer configure most of the advanced fields for customizing the behaviour.</p>
+
+<h2 id="default-configuration">Default Configuration</h2>
+
+<p>Creating an Actor System with the default configuration is just a matter of calling a single static method. Let&rsquo;s assume
+that you already have a javascript file, first you will need to import the ActorSystem class from the main package:</p>
+
+<pre><code class="language-js">const { ActorSystem } = require('tarant')
+</code></pre>
+
+<p>After importing the ActorSystem, you will need to call the <code>default</code> static method in ActorSystem and it will return a freshly
+created ActorSystem with a running, default configuration.</p>
+
+<pre><code class="language-js">const system = ActorSystem.default()
+</code></pre>
+
+<h2 id="using-custom-configuration">Using Custom Configuration</h2>
+
+<p>The ActorSystem is a complex object because it has several responsibilities, like the orchestration of different components.
+To simplify the configuration we provide a configuration builder with a set of methods to change the default configuration.
+Is worth to note that any not changed field will remain with the default configuration, which is usually enough for most
+applications.</p>
+
+<p>To use the configuration builder, you will need first to import it from the main package:</p>
+
+<pre><code class="language-js">const { ActorSystem, ActorSystemConfigurationBuilder } = require('tarant')
+</code></pre>
+
+<p>Then you can create your configuration using the builder, as in:</p>
+
+<pre><code class="language-js">const localStorageRepository = new LocalStorageRepository()
+const configuration = ActorSystemConfigurationBuilder.define()
+  .withMaterializers([new VueRenderer(), localStorageRepository]) 
+  // Render actors with vue.js and store their state in the localStorage of the browser
+  .withResolvers([localStorageRepository])
+  // When a non existing actor is requested, try to resolve them in the localStorage of the browser
+  .done()
+</code></pre>
+
+<p>And then, call the static constructor named <code>for</code> in the ActorSystem to provide the new configuration:</p>
+
+<pre><code class="language-js">const system = ActorSystem.for(configuration)
+</code></pre>
+
+<h2 id="freeing-the-actor-system">Freeing the Actor System</h2>
+
+<p>You can always stop the Actor System using the provided <code>free</code> method. It will stop all actors and stop all fibers.</p>
+
+<pre><code class="language-js">system.free()
+</code></pre>
+
+    </div>
+
+    
+
+    
+
+
+
+
+
+
+<div class="media author-card" itemscope itemtype="http://schema.org/Person">
+  
+  <div class="media-body">
+    <h5 class="card-title" itemprop="name"><a href="/"></a></h5>
+    
+    
+    <ul class="network-icon" aria-hidden="true">
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="/#contact" >
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://twitter.com/GeorgeCushen" target="_blank" rel="noopener">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ" target="_blank" rel="noopener">
+          <i class="ai ai-google-scholar"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://github.com/gcushen" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
 </div>
+
+
+
+
+    
+    
+
+    
+
+    
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tarant" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+  </div>
+</article>
+
 <div class="container">
   <footer class="site-footer">
   
@@ -564,6 +846,4 @@
 
   </body>
 </html>
-
-
 

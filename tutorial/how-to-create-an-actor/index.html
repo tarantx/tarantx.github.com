@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -17,10 +15,11 @@
   
     
   
-  <meta name="description" content=" TypeScript/JavaScript library for building software using the actor system model">
+  <meta name="description" content="Actors represent the main unit of logic in the Actor Model. They are transactional, asynchronous and safe. When you work with actors, you have the following guarantees:
+ A single actor will process a single message at a time. For example, if you call a method in an actor two times, you will not process those calls in parallel, but sequentially. A single actor will process messages in order. For example, if you call two different methods in an actor, messages will be processed in the calling order.">
 
   
-  <link rel="alternate" hreflang="en-us" href="http://tarantx.github.io/publication_types/">
+  <link rel="alternate" hreflang="en-us" href="http://tarantx.github.io/tutorial/how-to-create-an-actor/">
 
   
 
@@ -98,15 +97,15 @@
   
 
   
-  <link rel="alternate" href="http://tarantx.github.io/publication_types/index.xml" type="application/rss+xml" title="Tarant">
-  <link rel="feed" href="http://tarantx.github.io/publication_types/index.xml" type="application/rss+xml" title="Tarant">
+  <link rel="alternate" href="http://tarantx.github.io/index.xml" type="application/rss+xml" title="Tarant">
+  <link rel="feed" href="http://tarantx.github.io/index.xml" type="application/rss+xml" title="Tarant">
   
 
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="http://tarantx.github.io/publication_types/">
+  <link rel="canonical" href="http://tarantx.github.io/tutorial/how-to-create-an-actor/">
 
   
   
@@ -117,12 +116,15 @@
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="Tarant">
-  <meta property="og:url" content="http://tarantx.github.io/publication_types/">
-  <meta property="og:title" content="Publication_types | Tarant">
-  <meta property="og:description" content=" TypeScript/JavaScript library for building software using the actor system model"><meta property="og:image" content="http://tarantx.github.io/img/logo.png">
+  <meta property="og:url" content="http://tarantx.github.io/tutorial/how-to-create-an-actor/">
+  <meta property="og:title" content="How To Create an Actor | Tarant">
+  <meta property="og:description" content="Actors represent the main unit of logic in the Actor Model. They are transactional, asynchronous and safe. When you work with actors, you have the following guarantees:
+ A single actor will process a single message at a time. For example, if you call a method in an actor two times, you will not process those calls in parallel, but sequentially. A single actor will process messages in order. For example, if you call two different methods in an actor, messages will be processed in the calling order."><meta property="og:image" content="http://tarantx.github.io/img/logo.png">
   <meta property="og:locale" content="en-us">
   
+  <meta property="article:published_time" content="2018-11-28T00:00:00&#43;00:00">
   
+  <meta property="article:modified_time" content="2018-11-28T00:00:00&#43;00:00">
   
 
   
@@ -155,7 +157,7 @@
 
   
 
-  <title>Publication_types | Tarant</title>
+  <title>How To Create an Actor | Tarant</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" class="dark">
@@ -367,7 +369,9 @@
 </nav>
 
 
+<article class="article" itemscope itemtype="http://schema.org/Article">
 
+  
 
 
 
@@ -384,28 +388,360 @@
 
   
   
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">How To Create an Actor</h1>
+
+  
+
   
     
-  
-<div class="universal-wrapper pt-3">
-  <h1 itemprop="name">Publication_types</h1>
+
+<div class="article-metadata">
 
   
+  
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="">
+  </span>
+  
+
+  <span class="article-date">
+    
+    <meta content="2018-11-28 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+    <time datetime="2018-11-28 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+      2018-11-28
+    </time>
+  </span>
+  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="">
+  </span>
+
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/tutorial/how-to-create-an-actor/#disqus_thread"></a>
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=How%20To%20Create%20an%20Actor&amp;url=http%3a%2f%2ftarantx.github.io%2ftutorial%2fhow-to-create-an-actor%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2ftarantx.github.io%2ftutorial%2fhow-to-create-an-actor%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2ftarantx.github.io%2ftutorial%2fhow-to-create-an-actor%2f&amp;title=How%20To%20Create%20an%20Actor"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=http%3a%2f%2ftarantx.github.io%2ftutorial%2fhow-to-create-an-actor%2f&amp;title=How%20To%20Create%20an%20Actor"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=How%20To%20Create%20an%20Actor&amp;body=http%3a%2f%2ftarantx.github.io%2ftutorial%2fhow-to-create-an-actor%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 </div>
 
 
 
-<div class="universal-wrapper">
-  
+  <div class="article-container">
 
-  
-  
+    <div class="article-style" itemprop="articleBody">
+      
 
-  
+<p>Actors represent the main unit of logic in the Actor Model. They are transactional, asynchronous and safe. When you work
+with actors, you have the following guarantees:</p>
 
+<ul>
+<li><strong>A single actor will process a single message at a time</strong>. For example, if you call a method in an actor two times, you
+will not process those calls in parallel, but sequentially.</li>
+<li><strong>A single actor will process messages in order</strong>. For example, if you call two different methods in an actor, messages
+will be processed in the calling order.</li>
+<li><strong>Actor failures are isolated</strong>. If an actor fails because there is a requirement that is not fulfilled (like not
+having network connection), the exception will not propagate to all actors, but will be managed by the actor supervisor.</li>
+<li><strong>Slow actors will not block other actors</strong>. If an actor is waiting for a response of a server, or from another actor,
+it will not block other actors, that will be still processing messages.</li>
+</ul>
+
+<p>The process of creating an actor is quite transparent, and a simple task. Actor types are represented with a protocol
+they understand. A protocol is a set of messages that an actor can actually handle.</p>
+
+<p>For example, if we have the following protocol:</p>
+
+<pre><code class="language-js">ping()
+</code></pre>
+
+<p>It means that the actor will only understand the message <code>ping</code> without parameters.</p>
+
+<p>With the following protocol:</p>
+
+<pre><code class="language-js">sayHi(whom)
+sayBye(whom)
+</code></pre>
+
+<p>It means that the actor can handle both messages, <code>sayHi</code> and <code>sayBye</code> with a single parameter.</p>
+
+<p>To define an Actor protocol, we just need to create a ES6 class that extends Actor.</p>
+
+<pre><code class="language-js">const { Actor } = require('tarant')
+
+class Person extends Actor {
+  sayHi(whom) {
+    console.log('Hi', whom)
+  }
+
+  sayBye(whom) {
+    console.log('Bye', whom)
+  }
+}
+</code></pre>
+
+<p>This Actor type Person will handle two messages with the specified logic (just printing something into the console). To
+instantiate an actor, <a href="/tutorial/how-to-create-an-actor-system">we need a running actor system</a>. We are going to create an
+Actor System with the default configuration:</p>
+
+<pre><code class="language-js">const { ActorSystem } = require('tarant')
+
+const system = ActorSystem.default()
+</code></pre>
+
+<p>And to instantiate an actor, we need to call the <code>actorOf</code> method with the Actor protocol that we want to use:</p>
+
+<pre><code class="language-js">const dante = system.actorOf(Person)
+</code></pre>
+
+<p>And you can call any method of the actor directly, like any other class:</p>
+
+<pre><code class="language-js">dante.sayHi('Martin')
+</code></pre>
+
+<h2 id="actors-with-initial-state">Actors with initial state</h2>
+
+<p>It&rsquo;s common that an actor needs some initial state to work, for example, in our case, we need the person name. Actors can
+receive any initial state on the constructor, and this state can be passed through <code>actorOf</code>. For example, let&rsquo;s extend
+our <code>Person</code> protocol to allow having a name.</p>
+
+<pre><code class="language-js">class Person extends Actor {
+  constructor(name) {
+    super()
+
+    this.name = name
+  }
+
+  sayHi(whom) {
+    console.log(this.name, ': Hi', whom)
+  }
+
+  sayBye(whom) {
+    console.log(this.name, ': Bye', whom)
+  }
+}
+</code></pre>
+
+<p>When defining the constructor of an Actor, there are two things to consider:</p>
+
+<ul>
+<li><strong>You need to call the super() constructor</strong>. This is a JavaScript rule and it won&rsquo;t work if we don&rsquo;t do it the first
+thing in your newly created constructor.</li>
+<li><strong>super() has a parameter <code>id</code> that is the ID of the actor</strong>. Actors are uniquely identified by an ID that you can
+pass through the super constructor (as in <code>super(theIdIWant)</code>). If we don&rsquo;t specify any ID, tarant will create a random
+UUID for it.</li>
+</ul>
+
+<p>Now that we have our new redefined protocol, we can create a new actor with a name.</p>
+
+<pre><code class="language-js">const dante = system.actorOf(Person, ['Dante'])
+</code></pre>
+
+<p>Now, calling the sayHi method like in the previous example, will show:</p>
+
+<pre><code>&gt; Dante : Hi Martin
+</code></pre>
+
+<h2 id="how-calling-an-actor-works">How calling an Actor works</h2>
+
+<p>It&rsquo;s important to note that calling an actor method is not a synchronous operation. It&rsquo;s completely asynchronous and they
+always return promises. When you call a method on an actor, the actor will add a new message to it&rsquo;s mailbox, and will be
+processing messages in the mailbox until it&rsquo;s empty.</p>
+
+<p>You can find more information of the architecture in <a href="/architecture/">the architecture page</a>.</p>
+
+    </div>
+
+    
+
+    
+
+
+
+
+
+
+<div class="media author-card" itemscope itemtype="http://schema.org/Person">
+  
+  <div class="media-body">
+    <h5 class="card-title" itemprop="name"><a href="/"></a></h5>
+    
+    
+    <ul class="network-icon" aria-hidden="true">
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="/#contact" >
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://twitter.com/GeorgeCushen" target="_blank" rel="noopener">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ" target="_blank" rel="noopener">
+          <i class="ai ai-google-scholar"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://github.com/gcushen" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
 </div>
+
+
+
+
+    
+    
+
+    
+
+    
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tarant" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+  </div>
+</article>
+
 <div class="container">
   <footer class="site-footer">
   
@@ -564,6 +900,4 @@
 
   </body>
 </html>
-
-
 
