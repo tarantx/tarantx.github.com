@@ -58,11 +58,24 @@
     </item>
     
     <item>
-      <title>Try It!</title>
-      <link>http://tarantx.github.io/home/custom/</link>
+      <title>modules</title>
+      <link>http://tarantx.github.io/home/module-tarant/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://tarantx.github.io/home/custom/</guid>
+      <guid>http://tarantx.github.io/home/module-tarant/</guid>
+      <description>Tarant is the core module. Implements all needed functionality related to the Actor Model, like actor materialization, resolution, supervision and communication. All of the showcases listed here only depend on this module.
+
+Tarant-vue integrates vue.js with tarant, so your vue.js components are also actors. Improves performance, reliability, and simplifies how components are written. You can see a really basic showcase here.
+tarant-local-storage 
+Tarant-local-storage implements implicit persistence of your actors in the web browser.</description>
+    </item>
+    
+    <item>
+      <title>Try It!</title>
+      <link>http://tarantx.github.io/home/try-it/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/home/try-it/</guid>
       <description>You can try Tarant in CodePen and play a bit with it. The implemented example counts the number of seconds elapsed and updates a HTML element with the count.
 See the Pen tarant quick-start example by Kevin Mas Ruiz (@kmruiz) on CodePen.
 
