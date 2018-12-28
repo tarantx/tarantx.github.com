@@ -23,7 +23,7 @@ Features used  Async Actors: Async actors with promises are already part of Tara
     </item>
     
     <item>
-      <title>Pub Sub for Actors</title>
+      <title>PubSub for Actors</title>
       <link>http://tarantx.github.io/showcases/pub-sub/</link>
       <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
       
