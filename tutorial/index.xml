@@ -43,9 +43,19 @@ Setting up Tarant The only step needed for using Tarant is installing the librar
     </item>
     
     <item>
+      <title>How to Create a Function Actor</title>
+      <link>http://tarantx.github.io/tutorial/how-to-create-a-function-actor/</link>
+      <pubDate>Tue, 27 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/tutorial/how-to-create-a-function-actor/</guid>
+      <description>Sometimes creating a whole actor is not needed because the problem to solve is relatively simple and a set of functions is enough. Tarant contemplates this scenario allowing the developer to write function actors, that benefit from some of the properties of actors, but are simpler.
+ They are asynchronous and non-blocking They can be composed They partially benefit from materializers  However, there are some drawbacks compared to normal actors:</description>
+    </item>
+    
+    <item>
       <title>How To Apply Pub Sub Patterns</title>
       <link>http://tarantx.github.io/tutorial/how-to-apply-pubsub-patterns/</link>
-      <pubDate>Tue, 27 Nov 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 26 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>http://tarantx.github.io/tutorial/how-to-apply-pubsub-patterns/</guid>
       <description>Tarant implements a basic, but powerful pubsub mechanism named topics. A topic is a stream of events that are sent to all subscribers of the topic. For example, if we send the event hello to the topic salutations, and there are three subscribers, all of them will receive a copy of hello.

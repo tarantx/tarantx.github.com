@@ -511,9 +511,51 @@ Actor System itself), the error will be delegated to the top level supervisor.&l
     </item>
     
     <item>
+      <title>How to Create a Function Actor</title>
+      <link>http://tarantx.github.io/tutorial/how-to-create-a-function-actor/</link>
+      <pubDate>Tue, 27 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/tutorial/how-to-create-a-function-actor/</guid>
+      <description>&lt;p&gt;Sometimes creating a whole actor is not needed because the problem to solve is relatively simple and a set of
+functions is enough. Tarant contemplates this scenario allowing the developer to write &lt;code&gt;function actors&lt;/code&gt;, that
+benefit from some of the properties of actors, but are simpler.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;They are asynchronous and non-blocking&lt;/li&gt;
+&lt;li&gt;They can be composed&lt;/li&gt;
+&lt;li&gt;They partially benefit from materializers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;However, there are some drawbacks compared to normal actors:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;They can not subscribe to topics&lt;/li&gt;
+&lt;li&gt;They are stateless, so some materializers won&amp;rsquo;t work&lt;/li&gt;
+&lt;li&gt;They &lt;strong&gt;must&lt;/strong&gt; return promises&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To create an actor function, &lt;a href=&#34;http://tarantx.github.io/tutorial/how-to-create-an-actor-system&#34;&gt;you need a running actor system&lt;/a&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const system = ActorSystem.default()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And then wrap the function calling the &lt;code&gt;functionFor&lt;/code&gt; method in the system:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const sumActor = system.functionFor(async (a, b) =&amp;gt; a + b)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And you can call it as a normal async function:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;const result = await sumActor(5, 15)
+expect(result).toBe(20)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>How To Apply Pub Sub Patterns</title>
       <link>http://tarantx.github.io/tutorial/how-to-apply-pubsub-patterns/</link>
-      <pubDate>Tue, 27 Nov 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 26 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>http://tarantx.github.io/tutorial/how-to-apply-pubsub-patterns/</guid>
       <description>
