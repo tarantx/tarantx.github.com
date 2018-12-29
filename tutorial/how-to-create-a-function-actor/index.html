@@ -512,7 +512,7 @@ benefit from some of the properties of actors, but are simpler.</p>
 <ul>
 <li>They can not subscribe to topics</li>
 <li>They are stateless, so some materializers won&rsquo;t work</li>
-<li>They <strong>must</strong> return promises</li>
+<li>They <strong>must</strong> return promises or nothing at all (like callbacks)</li>
 </ul>
 
 <p>To create an actor function, <a href="/tutorial/how-to-create-an-actor-system">you need a running actor system</a>:</p>

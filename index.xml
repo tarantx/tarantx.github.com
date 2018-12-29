@@ -531,7 +531,7 @@ benefit from some of the properties of actors, but are simpler.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;They can not subscribe to topics&lt;/li&gt;
 &lt;li&gt;They are stateless, so some materializers won&amp;rsquo;t work&lt;/li&gt;
-&lt;li&gt;They &lt;strong&gt;must&lt;/strong&gt; return promises&lt;/li&gt;
+&lt;li&gt;They &lt;strong&gt;must&lt;/strong&gt; return promises or nothing at all (like callbacks)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;To create an actor function, &lt;a href=&#34;http://tarantx.github.io/tutorial/how-to-create-an-actor-system&#34;&gt;you need a running actor system&lt;/a&gt;:&lt;/p&gt;
