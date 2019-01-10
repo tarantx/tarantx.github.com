@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>persist on Tarant</title>
+    <link>http://tarantx.github.io/tags/persist/</link>
+    <description>Recent content in persist on Tarant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 29 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://tarantx.github.io/tags/persist/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title> Tarant Local Storage</title>
+      <link>http://tarantx.github.io/modules/tarant-local-storage/</link>
+      <pubDate>Wed, 29 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/modules/tarant-local-storage/</guid>
+      <description>Motivation Usually complex applications need to store offline part of the state, so it can be synced back or reused later. This module lets tarant store your actors serialized in the local storage and recovered implicitly.
+Installation Add it to your project using npm install tarant-local-storage --save or yarn add tarant-local-storage
+Usage You need to mark which classes need to be exported first. Usually this is done with the LocalStoragePersisted</description>
+    </item>
+    
+    <item>
+      <title> Tarant DB Persist</title>
+      <link>http://tarantx.github.io/modules/tarant-db-persist/</link>
+      <pubDate>Tue, 29 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/modules/tarant-db-persist/</guid>
+      <description>Motivation Provide the capabilities to actors on the backend to be persisted using waterline adapters.
+Installation add it to your project using npm install tarant-db-persist --save or yarn add tarant-db-persist
+Usage Initialize the sync client with the waterline adapter from the persist storage you will be interested on
+import { ActorSystem, ActorSystemConfigurationBuilder } from &#39;tarant&#39;; import * as diskAdapter from &#39;sails-disk&#39;; import { PersistResolverMaterializer } from &#39;tarant-db-persist&#39;; import AppActor from &#39;.</description>
+    </item>
+    
+  </channel>
+</rss>

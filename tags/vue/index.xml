@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vue on Tarant</title>
+    <link>http://tarantx.github.io/tags/vue/</link>
+    <description>Recent content in vue on Tarant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Mon, 29 Oct 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://tarantx.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title> Tarant Vue</title>
+      <link>http://tarantx.github.io/modules/tarant-vue/</link>
+      <pubDate>Mon, 29 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/modules/tarant-vue/</guid>
+      <description>Motivation Provide the capabilities to actors to be render using the vue framework.
+Installation add it to your project using npm install tarant-vue --save or yarn add tarant-vue
+Usage Extend the vue actor with a template and the properties to bind to the id of the actor will relate to the html component id
+import { VueActor } from &amp;quot;tarant-vue&amp;quot;; export default class AppActor extends VueActor { constructor() { super(&amp;quot;#app&amp;quot;) this.</description>
+    </item>
+    
+  </channel>
+</rss>

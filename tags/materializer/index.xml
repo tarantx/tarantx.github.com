@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>materializer on Tarant</title>
+    <link>http://tarantx.github.io/tags/materializer/</link>
+    <description>Recent content in materializer on Tarant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Mon, 29 Oct 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://tarantx.github.io/tags/materializer/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title> Tarant Vue</title>
+      <link>http://tarantx.github.io/modules/tarant-vue/</link>
+      <pubDate>Mon, 29 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/modules/tarant-vue/</guid>
+      <description>Motivation Provide the capabilities to actors to be render using the vue framework.
+Installation add it to your project using npm install tarant-vue --save or yarn add tarant-vue
+Usage Extend the vue actor with a template and the properties to bind to the id of the actor will relate to the html component id
+import { VueActor } from &amp;quot;tarant-vue&amp;quot;; export default class AppActor extends VueActor { constructor() { super(&amp;quot;#app&amp;quot;) this.</description>
+    </item>
+    
+    <item>
+      <title> Tarant Local Storage</title>
+      <link>http://tarantx.github.io/modules/tarant-local-storage/</link>
+      <pubDate>Wed, 29 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/modules/tarant-local-storage/</guid>
+      <description>Motivation Usually complex applications need to store offline part of the state, so it can be synced back or reused later. This module lets tarant store your actors serialized in the local storage and recovered implicitly.
+Installation Add it to your project using npm install tarant-local-storage --save or yarn add tarant-local-storage
+Usage You need to mark which classes need to be exported first. Usually this is done with the LocalStoragePersisted</description>
+    </item>
+    
+    <item>
+      <title> Tarant Sync Client</title>
+      <link>http://tarantx.github.io/modules/tarant-sync-client/</link>
+      <pubDate>Fri, 29 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/modules/tarant-sync-client/</guid>
+      <description>Motivation Provide the capabilities to actors to synchronize with a backend.
+Installation add it to your project using npm install tarant-sync-client --save or yarn add tarant-sync-client
+Usage Initialize the sync client with the configuration you desire and add it to your actor system as both a materializxer and a resolver
+import { RemoteResolverMaterializer } from &amp;quot;tarant-sync-client&amp;quot;; import AppActor from &#39;../AppActor&#39;; const config : any = { sync: { active: true, delay: 1000 }, paths: { pull: &amp;quot;/pull&amp;quot;, push: &amp;quot;/push&amp;quot;, }, actorTypes: { AppActor } } const remote = new RemoteResolverMaterializer(config) const system = ActorSystem.</description>
+    </item>
+    
+    <item>
+      <title> Tarant Sync Client</title>
+      <link>http://tarantx.github.io/modules/tarant-sync-router-express/</link>
+      <pubDate>Sun, 29 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/modules/tarant-sync-router-express/</guid>
+      <description>Motivation remote-sync server for bindings clients using routers or tarant-sync-router-express
+Installation add it to your project using npm install tarant-sync-router-express --save or yarn add tarant-sync-router-express
+Usage initialize your controllers/routers by calling the SyncController with the actor system and the wanted configuration. Adding them to your express app.
+import SyncController from &amp;quot;tarant-sync-router-express&amp;quot; import { ActorSystem, ActorSystemConfigurationBuilder } from &#39;tarant&#39; import AppActor from &#39;../AppActor&#39; const app: express.Application = express() const port: number = 3002 const config : any = { paths: { pull: &amp;quot;/pull&amp;quot;, push: &amp;quot;/push&amp;quot;, }, actorTypes: { AppActor } } const system : any = ActorSystem.</description>
+    </item>
+    
+    <item>
+      <title> Tarant DB Persist</title>
+      <link>http://tarantx.github.io/modules/tarant-db-persist/</link>
+      <pubDate>Tue, 29 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/modules/tarant-db-persist/</guid>
+      <description>Motivation Provide the capabilities to actors on the backend to be persisted using waterline adapters.
+Installation add it to your project using npm install tarant-db-persist --save or yarn add tarant-db-persist
+Usage Initialize the sync client with the waterline adapter from the persist storage you will be interested on
+import { ActorSystem, ActorSystemConfigurationBuilder } from &#39;tarant&#39;; import * as diskAdapter from &#39;sails-disk&#39;; import { PersistResolverMaterializer } from &#39;tarant-db-persist&#39;; import AppActor from &#39;.</description>
+    </item>
+    
+  </channel>
+</rss>

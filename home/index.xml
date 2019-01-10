@@ -29,7 +29,7 @@
       <guid>http://tarantx.github.io/home/hero/</guid>
       <description>The JavaScript library for building software with the Actor Model
 Star
- Guitter 
+ Gitter 
  Quick Start</description>
     </item>
     
@@ -74,16 +74,12 @@ For a more advanced web applications, we have a vue.</description>
     </item>
     
     <item>
-      <title>modules</title>
-      <link>http://tarantx.github.io/home/module-tarant/</link>
+      <title>Modules</title>
+      <link>http://tarantx.github.io/home/modules/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://tarantx.github.io/home/module-tarant/</guid>
-      <description>Tarant is the core module. Implements all needed functionality related to the Actor Model, like actor materialization, resolution, supervision and communication. All of the showcases listed here only depend on this module.
-
-Tarant-vue integrates vue.js with tarant, so your vue.js components are also actors. Improves performance, reliability, and simplifies how components are written. You can see a really basic showcase here.
-tarant-local-storage 
-Tarant-local-storage implements implicit persistence of your actors in the web browser.</description>
+      <guid>http://tarantx.github.io/home/modules/</guid>
+      <description></description>
     </item>
     
     <item>

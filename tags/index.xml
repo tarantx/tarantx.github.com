@@ -11,5 +11,59 @@
 	<atom:link href="http://tarantx.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>materializer</title>
+      <link>http://tarantx.github.io/tags/materializer/</link>
+      <pubDate>Mon, 29 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/tags/materializer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>persist</title>
+      <link>http://tarantx.github.io/tags/persist/</link>
+      <pubDate>Wed, 29 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/tags/persist/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>resolver</title>
+      <link>http://tarantx.github.io/tags/resolver/</link>
+      <pubDate>Wed, 29 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/tags/resolver/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sync</title>
+      <link>http://tarantx.github.io/tags/sync/</link>
+      <pubDate>Fri, 29 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/tags/sync/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tarant</title>
+      <link>http://tarantx.github.io/tags/tarant/</link>
+      <pubDate>Sat, 29 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/tags/tarant/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vue</title>
+      <link>http://tarantx.github.io/tags/vue/</link>
+      <pubDate>Mon, 29 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/tags/vue/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

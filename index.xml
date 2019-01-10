@@ -11,6 +11,99 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title> Tarant</title>
+      <link>http://tarantx.github.io/modules/tarant/</link>
+      <pubDate>Sat, 29 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://tarantx.github.io/modules/tarant/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://www.tarant.io/&#34; target=&#34;_blank&#34;&gt;Tarant&lt;/a&gt; is a TypeScript/JavaScript library for building software using the actor system model.
+You can visit the home page for more information and a more complete quick start guide: &lt;a href=&#34;https://www.tarant.io/&#34; target=&#34;_blank&#34;&gt;https://www.tarant.io/&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Actors are easy to reason about&lt;/strong&gt;: An actor is the unit of state and logic of your application.
+They are transactional, so you don&amp;rsquo;t need to handle state rollbacks in case of errors.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Actors improve performance&lt;/strong&gt;: Asynchronous by default, every actor actual communication is non-blocking so slow actors will not block fast actors.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Actors are extensible&lt;/strong&gt;: As actors are built on top of objects, actor classes can be inherited,
+composed and injected.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+
+&lt;p&gt;Tarant implements a rich set of features that makes it suitable for building complex applications.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Actors are reliable because they are transactional. You don&amp;rsquo;t need to bother yourself with error recovery.&lt;/li&gt;
+&lt;li&gt;Actors are performant, as they are pull-based and decoupled from other actors lifecycle.&lt;/li&gt;
+&lt;li&gt;Actors are easy to debug. All messages come with information about the sender and all the state information is saved
+in a time machine, for further debugging and navigation.&lt;/li&gt;
+&lt;li&gt;The Actor System has an event bus. Actors can subscribe, publish and request messages from any topic and subscriptions
+can be handled at any time.&lt;/li&gt;
+&lt;li&gt;The Actor System is highly extensive. You can add your own supervisor and materializers to add new features like
+implicit persistence or rendering of actors.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;showcase&#34;&gt;Showcase&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;./examples/ping-pong.js&#34;&gt;Actors support asynchronous messaging&lt;/a&gt; and answering through Promises. Slow actors will not block fast actors.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;./examples/scheduleds.js&#34;&gt;Actors can schedule tasks&lt;/a&gt; for interval or one-shot delayed actions.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;./examples/supervisor.js&#34;&gt;Actors are safe and can be recovered with a supervisor&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;examples/pubsub.js&#34; target=&#34;_blank&#34;&gt;Actors can subscribe in a topic in a type-safe way&lt;/a&gt; for extensible communication.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;quick-start&#34;&gt;Quick start&lt;/h2&gt;
+
+&lt;p&gt;Creating your first actor system is easy and you don&amp;rsquo;t need to understand everything that is happening under the hood.
+First you must install the package:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;npm install tarant --save&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Then create your first ActorSystem&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;let { Actor, ActorSystem } = require(&#39;tarant&#39;)
+let system = ActorSystem.default()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And create your actor class:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;class Ping extends Actor {
+    ping() {
+        console.log(&amp;quot;PING&amp;quot;)
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then you only need to instantiate your actor and send messages to it:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;let myPinger = system.actorOf(Ping, [])
+myPinger.ping()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The application will continue running and processing messages until you stop the actor system:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;system.free()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you run the application you will see the following output:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;PING
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;contribution-prs-welcome-https-img-shields-io-badge-prs-welcome-brightgreen-svg-issues-welcome-https-img-shields-io-badge-issues-welcome-brightgreen-svg&#34;&gt;Contribution &lt;img src=&#34;https://img.shields.io/badge/PRs-welcome-brightgreen.svg&#34; alt=&#34;PRs Welcome&#34; /&gt; &lt;img src=&#34;https://img.shields.io/badge/issues-welcome-brightgreen.svg&#34; alt=&#34;Issues Welcome&#34; /&gt;&lt;/h2&gt;
+
+&lt;p&gt;PR and issues are always welcome as a quick way of contributing to the project. Remember to be polite, this is a open source
+project and ordinary requirements for PRs and issues are also a requirement.&lt;/p&gt;
+
+&lt;p&gt;If you want to be a long-term contributor and participate actively on the design of new features on the project, contact
+us! Check the package.json to see who you need to contact.&lt;/p&gt;
+
+&lt;h5 id=&#34;created-my-free-logo-https-logomakr-com-43ipoz-at-a-href-http-logomakr-com-title-logo-makr-logomakr-com-a&#34;&gt;Created my free &lt;a href=&#34;https://logomakr.com/43ipOz&#34; target=&#34;_blank&#34;&gt;logo&lt;/a&gt; at &lt;a href=&#34;http://logomakr.com&#34; title=&#34;Logo Makr&#34;&gt;LogoMakr.com&lt;/a&gt;&lt;/h5&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Actors playing Ping Pong</title>
       <link>http://tarantx.github.io/showcases/ping-pong/</link>
       <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
